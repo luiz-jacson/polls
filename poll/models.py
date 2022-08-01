@@ -9,6 +9,7 @@ class Pergunta(models.Model):
 class Resposta(models.Model):
     id_pergunta = models.ForeignKey(Pergunta, on_delete=models.CASCADE)
     texto = models.TextField(max_length=50)
+    votes = models.IntegerField(default=0)
     def __str__(self):
         return self.texto
 
