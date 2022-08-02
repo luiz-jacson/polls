@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1>Created Polls</h1>
+{%for p in pergunta_list%}
+    <ul>
+    <li><a href="">{{p.texto_pergunta}}</a></li>
+    </ul>
+{%endfor%}
+
+{%endblock content%}
