@@ -3,9 +3,9 @@
 <h1>Create Poll</h1>
 <form action="{%url 'create'%}" method="post">{%csrf_token%}
     <input type="text" name = 'texto_pergunta'> Pergunta <br><br>
-    <input type="number" name = 'qtde'> <input type="submit" name = 'add_resp' value ='Número de alternativas'> <br><br>
+    <input type="number" value="{{quantidade|last}}" name = 'qtde' placeholder="{{quantidade|last}}" > <input type="submit" name = 'add_resp' value ='Número de alternativas'> <br><br>
     {%for q in quantidade%}
-    <input type="text" name = 'texto_alternativa'> Alternativa {{q}}<br> <br>
+    <input type="text" name = 'texto_alternativa{{forloop.counter}}' placeholder=''> Alternativa {{forloop.counter}}<br> <br>
     {%endfor%}
     <input type = 'submit' value="Create Poll" name = 'create_poll'>
 </form>
