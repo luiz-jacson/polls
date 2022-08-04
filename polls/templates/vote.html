@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1>Vote</h1>
+{{pergunta.texto_pergunta}}
+<h1>{{c.fk_id_pergunta}}</h1>
+<form action="" method="post">
+{%csrf_token%}
+{%for c in respostas%}
+<ul>
+    <li>{{c.texto_resposta}} <input type="radio" value="{{c.pk}}" name = 'respostas'> </li>
+</ul>
+{%endfor%}
+<input type='submit' value="Votar" name = 'Votar'>
+</form>
+{%endblock content%}

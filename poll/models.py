@@ -1,5 +1,6 @@
 from tkinter import CASCADE
 from django.db import models
+from django.urls import reverse
 
 class Pergunta(models.Model):
     texto_pergunta = models.TextField(max_length=200)
@@ -12,4 +13,5 @@ class Resposta(models.Model):
     votes = models.IntegerField(default=0)
     def __str__(self):
         return self.texto_resposta
+   
 
