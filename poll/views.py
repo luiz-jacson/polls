@@ -40,11 +40,13 @@ def Respostas(request,pk):
             resposta = Resposta.objects.get(pk = c)
             resposta.votes += 1
             resposta.save()
-        return redirect('home')
+        return redirect('result', pk)
     return render(request, 'vote.html',{'respostas':lista_respostas})
 
 def Resultados(request, pk):
-    pass
+    lista_respostas = Resposta.objects.filter(fk_id_pergunta = pk)
+    pergunta = Pergunta.objects.filter(pk = pk)
+    return render(request, 'result.html',{'respostas':lista_respostas, 'pergunta':pergunta})
     
     
     

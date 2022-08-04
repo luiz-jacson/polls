@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1>
+    {%for p in pergunta%}
+    {{p.texto_pergunta}}
+    {%endfor%}
+</h1>
+{%for c in respostas%}
+<ul>
+    <li><p>{{c.texto_resposta}}: {{c.votes}} votos</p> </li>
+</ul>
+{%endfor%}
+{%endblock content%}
