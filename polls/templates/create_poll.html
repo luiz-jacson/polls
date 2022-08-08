@@ -1,12 +1,25 @@
 {%extends 'base.html'%}
 {%block content%}
 <h1>Create Poll</h1>
+<script text = 'text/javascript'>
+    $(function() {
+        $('.refresh').formset({
+            prefix: '{{ form_resposta.prefix }}',
+            addText: 'Add Answer',
+            deleteText: 'Remove'
+    });
+    });
+</script>
 <form action="{%url 'create'%}" method="post">{%csrf_token%}
-    <input type="text" name = 'texto_pergunta'> Pergunta <br><br>
-    <input type="number" value="{{quantidade|last}}" name = 'qtde' placeholder="{{quantidade|last}}" > <input type="submit" name = 'add_resp' value ='Número de alternativas'> <br><br>
-    {%for q in quantidade%}
-    <input type="text" name = 'texto_alternativa{{forloop.counter}}' placeholder=''> Alternativa {{forloop.counter}}<br> <br>
-    {%endfor%}
+        <p>Question: {{form_pergunta.texto_pergunta}}</p>
+        {{form_resposta.management_form}}
+
+        {%for form_resp in form_resposta %}
+        <div class="refresh">
+        {{form_resp}}
+        </div>
+        {%endfor%} <br>
     <input type = 'submit' value="Create Poll" name = 'create_poll'>
 </form>
+
 {%endblock content%}
