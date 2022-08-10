@@ -1,14 +1,16 @@
 {%extends 'base.html'%}
 
 {%block content%}
-<h1>
+<h2 class = 'question'>
     {%for p in pergunta%}
     {{p.texto_pergunta}}
     {%endfor%}
-</h1>
+</h2>
 {%for c in respostas%}
 <ul>
-    <li><p>{{c.texto_resposta}}: {{c.votes}} votos</p> </li>
+    <div class = 'respvoto'>
+    <li><span class = "alternativa">{{c.texto_resposta}}</span> : {{c.votes}} votos </li>
+    </div>
 </ul>
 {%endfor%}
 {%endblock content%}

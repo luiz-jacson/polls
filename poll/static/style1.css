@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+:root{
+    --bluedark : #312C52;
+    --navy: #604BEB;
+    --navyligh: #7E71D1;
+    --navydark: #0E0357;
+    --grayblue: #5F559E;
+
+
+}
+
+
+header#cabecalho{
+    background-color: var(--grayblue);
+    margin: auto;
+    max-width: 800px;
+    min-width: 300px;
+    box-shadow: 5px 6px 10px black;
+
+}
+
+header#cabecalho > nav > a{
+    display: inline-block;
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+header#cabecalho > nav > a#menucreate:hover{
+    background-color: var(--bluedark);
+    margin-left: 20px;
+    padding: 20px 10px;
+    transition: 0.4s;
+    text-decoration: underline;
+}
+
+
+body{
+    background-color: var(--navyligh);
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+main#conteudo{
+    background-color: var(--grayblue);
+    margin: auto;
+    max-width: 800px;
+    min-width: 300px;
+    box-shadow: 5px 6px 10px black;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+main#conteudo > ul{
+    list-style: none;
+}
+main#conteudo > form > ul{
+    list-style: none;
+}
+main#conteudo > form{
+    text-align: center;
+}
+main#conteudo > h1{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+#searchbar{
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+#botaoprocurar{
+    background-color: #0E0357;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+#barrapesquisa{
+    padding: 8px 20px;
+}
+#homequery{
+    text-align: left;
+   
+}
+#homequery{
+    text-align: center;
+    
+}
+#homequery > ul> li{
+    text-align: left;
+    list-style: none;
+}
+.paginas{
+    padding-right: 7px;
+}
+.paginas:hover{
+    text-decoration: underline;
+}
+
+.itens:hover{
+    text-decoration: underline;
+}
+
+.resultados:hover{
+    text-decoration: underline;
+}
+#vote{
+    text-align: center;
+    margin-left: 30px;
+    
+}
+
+.alternativa{
+    font-style:italic;
+    font-weight: bold;
+    
+}
+.respvoto{
+    list-style: none;
+    text-align: justify;
+    text-align: center;
+}
+
+h1.logo{
+    font-family: 'Oleo Script Swash Caps', cursive;
+    text-align: center;
+}
+main#conteudo > h1.logo{
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 40px;
+}
+
+.question{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#botaovotar{
+    background-color: #0E0357;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+}

@@ -6,21 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{%static 'style1.css'%}">
     <link rel="jquery" href="{%static 'jquery.js'%}">
-    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Open+Sans:wght@500&display=swap');
+    </style>
 </head>
 <script type="text/javascript" src="{%static 'jquery.js'%}"></script>
-<header>
+<header id = "cabecalho">
     <nav>
-        <a href="{%url 'home'%}">Polls</a> 
-        <a href="{%url 'create'%}" target="_blank">Create Poll</a>
+        <a href="{%url 'home'%}"><h1 class = "logo">Polls</h1></a> 
+        <a href="{%url 'create'%}" target="_blank" id = "menucreate">Create Poll</a>
     </nav>
 </header>
-<body>
+<body >
     <script type="text/javascript" src= {%static 'jquery-3.6.0.min.js'%}></script>
     <script type="text/javascript" src = {%static 'jquery.formset.js'%}></script>
+    <main id = 'conteudo'>
     {%block content%}
     {%endblock content%}
+    </main>
 
 </body>
 </html>

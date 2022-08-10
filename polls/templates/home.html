@@ -1,17 +1,19 @@
 {%extends 'base.html'%}
 {%block home%}
 {%block content%}
-<h1>Created Polls</h1>
+<h1 class="question">Created Polls</h1>
 <form action="{%url 'home'%}" method="POST">{%csrf_token%}
-<input type="text" name = 'pergunta_procurada'> <input type="submit" name = 'procurar' value = 'Search Poll'>
+<div id = "searchbar"><input type="text" name = 'pergunta_procurada' id = 'barrapesquisa'><input type="submit" name = 'procurar' value = 'Search Poll' id = botaoprocurar></div>
 </form>
+<div id = "homequery">
 {%for p in perguntas%}
     <ul>
-    <li><a href="{%url 'vote' p.pk%}">{{p.texto_pergunta}}</a>| <a href="{%url 'result' p.pk%}">Results</a></li>
+    <li><a class = 'itens' href="{%url 'vote' p.pk%}">{{p.texto_pergunta}}</a> | <a class = 'resultados' href="{%url 'result' p.pk%}">Results</a></li>
     </ul>
 {%endfor%}
+</div>
 {%for pagina in paginas%}
-<a href="{%url 'home_pagina' pagina%}" name = 'pagina'>{{pagina}}</a>
+<a class = 'paginas' href="{%url 'home_pagina' pagina%}" name = 'pagina'>{{pagina}}</a>
 {%endfor%}
 {%endblock content%}
 {%endblock home%}

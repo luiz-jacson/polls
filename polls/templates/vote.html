@@ -1,16 +1,21 @@
 {%extends 'base.html'%}
 
 {%block content%}
-<h1>Vote</h1>
-{{pergunta.texto_pergunta}}
-<h1>{{c.fk_id_pergunta}}</h1>
+<h1 class = "logo">Poll</h1>
+<div id = "vote">
+{%for c in pergunta%}
+<h2 class = 'question'>Question: {{c.texto_pergunta}}</h2>
+{%endfor%}
 <form action="" method="post">
 {%csrf_token%}
 {%for c in respostas%}
 <ul>
-    <li>{{c.texto_resposta}} <input type="radio" value="{{c.pk}}" name = 'respostas'> </li>
+    <div class = 'respvoto'>
+    <li>Answer {{forloop.counter}} : <span class = "alternativa">{{c.texto_resposta}}</span> <input type="radio" value="{{c.pk}}" name = 'respostas'> </li>
+    </div>
 </ul>
 {%endfor%}
-<input type='submit' value="Vote" name = 'Votar'>
+<input type='submit' value="Vote" name = 'Votar' id= "botaovotar" >
 </form>
+</div>
 {%endblock content%}

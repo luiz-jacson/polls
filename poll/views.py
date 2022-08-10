@@ -86,13 +86,18 @@ def Home_pagina(request,pagina):
 def Respostas(request,pk):
     lista_respostas = Resposta.objects.filter(fk_id_pergunta = pk)
     marcado = request.POST.getlist('respostas')
+    pergunta = Pergunta.objects.filter(pk = pk)
     if request.method == 'POST' and request.POST.get('Votar'):
         for c in marcado:
             resposta = Resposta.objects.get(pk = c)
             resposta.votes += 1
             resposta.save()
         return redirect('result', pk)
-    return render(request, 'vote.html',{'respostas':lista_respostas})
+    context = {
+        'respostas':lista_respostas,
+        'pergunta':pergunta
+    }
+    return render(request, 'vote.html', context)
 
 def Resultados(request, pk):
     lista_respostas = Resposta.objects.filter(fk_id_pergunta = pk)
