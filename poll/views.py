@@ -27,7 +27,7 @@ def Create_poll(request):
             pergunta = form_pergunta.save()
             form_resposta.instance = pergunta
             form_resposta.save()
-            return redirect('home')
+            return redirect('vote', pergunta.pk)
         else:
             print(form_resposta.is_valid())
             context = {
