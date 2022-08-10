@@ -3,7 +3,6 @@ from tkinter.messagebox import QUESTION
 from django.shortcuts import redirect, render
 from django.http import request
 from django.urls import reverse_lazy,reverse
-from django.views.generic import CreateView, ListView, DetailView
 from .models import Pergunta, Resposta
 from django.forms.models import inlineformset_factory
 from .forms import RespostaForm, PerguntaForm
@@ -42,9 +41,21 @@ def Create_poll(request):
 
 
 
-class Home_view(ListView):
-    model = Pergunta
-    template_name = 'home.html'
+def Home(request):
+    if request.method == 'GET':
+        lista_perguntas = Pergunta.objects.all()
+        context = {
+            'perguntas':lista_perguntas
+        }
+        return render(request, 'home.html', context)
+    elif request.method == 'POST' and  request.POST.get('procurar'):
+        lista_perguntas = Pergunta.objects.all().filter(texto_pergunta__icontains = request.POST.get('pergunta_procurada'))
+        context = {
+            'perguntas':lista_perguntas
+        }
+        return render(request, 'home.html', context)
+
+        
 
 
 def Respostas(request,pk):

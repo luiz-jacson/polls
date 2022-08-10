@@ -2,9 +2,12 @@
 
 {%block content%}
 <h1>Created Polls</h1>
-{%for p in pergunta_list%}
+<form action="{%url 'home'%}" method="POST">{%csrf_token%}
+<input type="text" name = 'pergunta_procurada'> <input type="submit" name = 'procurar' value = 'Search Poll'>
+</form>
+{%for p in perguntas%}
     <ul>
-    <li><a href="{%url 'vote' p.pk%}">{{p.texto_pergunta}}</a>| <a href="{%url 'result' p.pk%}">Resultado</a></li>
+    <li><a href="{%url 'vote' p.pk%}">{{p.texto_pergunta}}</a>| <a href="{%url 'result' p.pk%}">Results</a></li>
     </ul>
 {%endfor%}
 
