@@ -10,6 +10,7 @@ from .forms import RespostaForm, PerguntaForm
 
 
 def Create_poll(request):
+    cont = 0
     if request.method == 'GET':
         form_pergunta = PerguntaForm()
         form_resposta_factory = inlineformset_factory(Pergunta, Resposta, form = RespostaForm, extra=3)
@@ -23,7 +24,12 @@ def Create_poll(request):
         form_pergunta = PerguntaForm(request.POST)
         form_resposta_factory = inlineformset_factory(Pergunta, Resposta, form = RespostaForm)
         form_resposta = form_resposta_factory(request.POST)
-        if form_pergunta.is_valid() and form_resposta.is_valid():
+        for c in range(0,len(form_resposta)):
+            numero_resposta = request.POST.get(f'resposta_set-{c}-texto_resposta')
+            if numero_resposta != '':
+                cont += 1
+        print(cont)
+        if form_pergunta.is_valid() and form_resposta.is_valid() and cont > 0: 
             pergunta = form_pergunta.save()
             form_resposta.instance = pergunta
             form_resposta.save()
@@ -32,7 +38,8 @@ def Create_poll(request):
             print(form_resposta.is_valid())
             context = {
             'form_pergunta':form_pergunta,
-            'form_resposta':form_resposta
+            'form_resposta':form_resposta,
+            'erro': True,
             }
             return render(request, 'create_poll.html', context)
 

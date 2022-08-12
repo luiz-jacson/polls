@@ -1,7 +1,6 @@
 {%extends 'base.html'%}
 
 {%block content%}
-<h1 class = "logo">Poll</h1>
 <div id = "vote">
 {%for c in pergunta%}
 <h2 class = 'question'>Question: {{c.texto_pergunta}}</h2>
@@ -11,7 +10,7 @@
 {%for c in respostas%}
 <ul>
     <div class = 'respvoto'>
-    <li>Answer {{forloop.counter}} : <span class = "alternativa">{{c.texto_resposta}}</span> <input type="radio" value="{{c.pk}}" name = 'respostas'> </li>
+    <li class = 'respvotoitem'>Answer {{forloop.counter}} : <span class = "alternativa">{{c.texto_resposta}}</span> <input type="radio" value="{{c.pk}}" name = 'respostas'> </li>
     </div>
 </ul>
 {%endfor%}

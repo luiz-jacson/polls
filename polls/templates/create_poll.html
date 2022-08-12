@@ -1,6 +1,6 @@
 {%extends 'base.html'%}
 {%block content%}
-<h1>Create Poll</h1>
+<h2>Create Poll</h2>
 <script text = 'text/javascript'>
     $(function() {
         $('.refresh').formset({
@@ -11,6 +11,10 @@
     });
 </script>
 <form action="{%url 'create'%}" method="post">{%csrf_token%}
+        <div id="create">
+        {%if erro == True%}
+        <p class = 'erro'>*Fill in at least one answer field*</p>
+        {%endif%}
         <p>Question: {{form_pergunta.texto_pergunta}}</p>
         {{form_resposta.management_form}}
 
@@ -19,7 +23,8 @@
         {{form_resp}}
         </div>
         {%endfor%} <br>
-    <input type = 'submit' value="Create Poll" name = 'create_poll'>
+    <input type = 'submit' value="Create Poll" name = 'create_poll' id ='botaocriar'>
+</div>
 </form>
 
 {%endblock content%}

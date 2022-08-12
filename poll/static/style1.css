@@ -24,8 +24,9 @@ header#cabecalho > nav > a{
     margin-left: 30px;
     text-decoration: none;
     color: black;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+    font-family: 'Oleo Script', cursive;
+    font-size: 20px;
+    
 }
 header#cabecalho > nav > a#menucreate:hover{
     background-color: var(--bluedark);
@@ -38,7 +39,8 @@ header#cabecalho > nav > a#menucreate:hover{
 
 body{
     background-color: var(--navyligh);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oleo Script', sans-serif;
+    font-weight: lighter;
 }
 a{
     text-decoration: none;
@@ -66,9 +68,12 @@ main#conteudo > form > ul{
 main#conteudo > form{
     text-align: center;
 }
-main#conteudo > h1{
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
+
+main#conteudo > h1#questionhome{
+    font-family: 'Oleo Script', cursive;
+    font-weight: lighter;
+    font-size: 30px;
+    
 }
 #searchbar{
     text-align: center;
@@ -84,9 +89,13 @@ main#conteudo > h1{
     cursor: pointer;
     margin-top: 20px;
     margin-left: 5px;
+    font-family: 'Oleo Script', cursive;
+    font-size: 20px;
 }
 #barrapesquisa{
-    padding: 8px 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    
 }
 #homequery{
     text-align: left;
@@ -100,19 +109,60 @@ main#conteudo > h1{
     text-align: left;
     list-style: none;
 }
+.vote{
+    background-color: #0E0357;
+    border: none;
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.vote:hover{
+    text-decoration: underline;
+}
 .paginas{
-    padding-right: 7px;
+    padding-right: 10px;
+    background-color: #0E0357;
+    border: none;
+    border-radius: 100em;
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 10px;
 }
 .paginas:hover{
     text-decoration: underline;
 }
-
+#paginasdiv{
+    margin-top: 50px;
+}
+.itens{
+    font-size: 20px;
+}
 .itens:hover{
     text-decoration: underline;
 }
-
+.resultados{
+    background-color: #0E0357;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+}
 .resultados:hover{
     text-decoration: underline;
+}
+.rowitem{
+    margin-bottom: 25px;
+}
+span.rowitem{
+    font-size: 20px;
 }
 #vote{
     text-align: center;
@@ -123,6 +173,8 @@ main#conteudo > h1{
 .alternativa{
     font-style:italic;
     font-weight: bold;
+    font-size: 20px;
+    
     
 }
 .respvoto{
@@ -130,27 +182,68 @@ main#conteudo > h1{
     text-align: justify;
     text-align: center;
 }
+.respvotoitem{
+    font-size: 20px;
+}
+
 
 h1.logo{
-    font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oleo Script', cursive;
     text-align: center;
+    font-size: 30px;
 }
 main#conteudo > h1.logo{
-    font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 40px;
+    font-family: 'Oleo Script', cursive;
+    font-weight: lighter;
+    font-size: 35px;
 }
-
-.question{
-    font-size: 20px;
-    margin-bottom: 20px;
+div#create > p{
+    margin-right: 55px;
+    margin-bottom: 30px;
+}
+.refresh.dynamic-form{
+    margin-bottom: 10px;
+}
+.refresh.dynamic-form > a{
+    color: blue;
+    
+}
+.refresh.dynamic-form > a:hover{
+    text-decoration: underline;
+    
+}
+.add-row{
+    color: blue;
+}
+.add-row:hover{
+    text-decoration: underline;
 }
 
 #botaovotar{
     background-color: #0E0357;
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 10px 25px;
     text-decoration: none;
     cursor: pointer;
     margin-top: 20px;
+    font-family: 'Oleo Script', cursive;
+    font-size: 20px;
+}
+
+#botaocriar{
+    background-color: #0E0357;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Oleo Script', cursive;
+    font-size: 20px;
+}
+p.erro{
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+    font-style: italic;
 }
