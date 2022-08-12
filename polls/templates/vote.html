@@ -1,5 +1,5 @@
 {%extends 'base.html'%}
-
+{%load social_share%}
 {%block content%}
 <div id = "vote">
 {%for c in pergunta%}
@@ -10,11 +10,19 @@
 {%for c in respostas%}
 <ul>
     <div class = 'respvoto'>
-    <li class = 'respvotoitem'>Answer {{forloop.counter}} : <span class = "alternativa">{{c.texto_resposta}}</span> <input type="radio" value="{{c.pk}}" name = 'respostas'> </li>
+    <li class = 'respvotoitem'><input type="radio" value="{{c.pk}}" name = 'respostas'> <span class = "alternativa">{{c.texto_resposta}}</span> </li>
     </div>
 </ul>
 {%endfor%}
 <input type='submit' value="Vote" name = 'Votar' id= "botaovotar" >
+<div class = 'share'>
+    <span id = 'sharespan'>Share this Poll!</span>
+    {%for c in pergunta%}
+    {%post_to_whatsapp object_or_url "Share on Whatsapp!"%}
+    {%post_to_facebook object_or_url "Share on Facebook!"%}
+    {%post_to_twitter object_or_url "Share on Twitter!"%}
+    {%endfor%}
+</div>
 </form>
 </div>
 {%endblock content%}

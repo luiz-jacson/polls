@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'poll.apps.PollConfig',
+    'django_social_share',
 ]
 
 MIDDLEWARE = [

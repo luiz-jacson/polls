@@ -33,7 +33,7 @@ header#cabecalho > nav > a#menucreate:hover{
     margin-left: 20px;
     padding: 20px 10px;
     transition: 0.4s;
-    text-decoration: underline;
+    border-radius: 20px;
 }
 
 
@@ -91,6 +91,12 @@ main#conteudo > h1#questionhome{
     margin-left: 5px;
     font-family: 'Oleo Script', cursive;
     font-size: 20px;
+    border-radius: 20px;
+}
+#botaoprocurar:hover{
+    text-decoration: underline;
+    background-color: var(--navyligh);
+    transition: 0.5s;
 }
 #barrapesquisa{
     padding: 10px 20px;
@@ -118,9 +124,12 @@ main#conteudo > h1#questionhome{
     cursor: pointer;
     font-size: 20px;
     margin-left: 10px;
+    border-radius: 20px;
 }
 .vote:hover{
     text-decoration: underline;
+    background-color: var(--navyligh);
+    transition: 0.5s;
 }
 .paginas{
     padding-right: 10px;
@@ -135,6 +144,8 @@ main#conteudo > h1#questionhome{
 }
 .paginas:hover{
     text-decoration: underline;
+    background-color: var(--navyligh);
+    transition: 0.5s;
 }
 #paginasdiv{
     margin-top: 50px;
@@ -154,9 +165,12 @@ main#conteudo > h1#questionhome{
     cursor: pointer;
     font-size: 20px;
     margin-left: 10px;
+    border-radius: 20px;
 }
 .resultados:hover{
     text-decoration: underline;
+    background-color: var(--navyligh);
+    transition: 0.5s;
 }
 .rowitem{
     margin-bottom: 25px;
@@ -179,11 +193,10 @@ span.rowitem{
 }
 .respvoto{
     list-style: none;
-    text-align: justify;
-    text-align: center;
 }
 .respvotoitem{
     font-size: 20px;
+    text-align: left;
 }
 
 
@@ -229,6 +242,13 @@ div#create > p{
     margin-top: 20px;
     font-family: 'Oleo Script', cursive;
     font-size: 20px;
+    border-radius: 20px;
+    text-align: left;
+}
+#botaovotar:hover{
+    text-decoration: underline;
+    background-color: var(--navyligh);
+    transition: 0.5s;
 }
 
 #botaocriar{
@@ -241,9 +261,47 @@ div#create > p{
     margin-top: 20px;
     font-family: 'Oleo Script', cursive;
     font-size: 20px;
+    border-radius: 20px;
+}
+#botaocriar:hover{
+    text-decoration: underline;
+    background-color: var(--navyligh);
+    transition: 0.5s;
 }
 p.erro{
     font-family: 'Times New Roman', Times, serif;
     color: red;
     font-style: italic;
+}
+.social_media{
+    width: 25px;
+    display: inline-block;
+}
+.social_media:hover{
+    width: 45px;
+    transition: 0.4s;
+}
+div.whatsapp-this{
+    display: inline-block;
+    padding-right: 15px;
+}
+
+div.facebook-this{
+    display: inline-block;
+    padding-right: 15px;
+}
+
+div.tweet-this{
+    display: inline-block;
+}
+div.share{
+    display: inline-block;
+    padding-left: 100px;
+    
+   
+}
+span#sharespan{
+    margin-right: 10px;
+    font-size: 20px;
+    
 }
