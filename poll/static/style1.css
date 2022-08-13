@@ -283,16 +283,17 @@ p.erro{
 }
 div.whatsapp-this{
     display: inline-block;
-    padding-right: 15px;
+    padding-right: 20px;
 }
 
 div.facebook-this{
     display: inline-block;
-    padding-right: 15px;
+    padding-right: 20px;
 }
 
 div.tweet-this{
     display: inline-block;
+    
 }
 div.share{
     display: inline-block;
