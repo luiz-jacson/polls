@@ -15,16 +15,11 @@
     
 </ul>
 {%endfor%}
-<input type='submit' value="Vote" name = 'Votar' id= "botaovotar" >
-
-<div class = 'share'>
-    <span id = 'sharespan'>Share this Poll!</span>
+<span id = 'sharespan'><input type='submit' value="Vote" name = 'Votar' id= "botaovotar">{% copy_to_clipboard object_or_url "Copy Link" "copylink" %} 
     {%for c in pergunta%}
-    <img class = 'social_media' src="{%static 'whatsapp.png'%}" alt="">{%post_to_whatsapp object_or_url " "%}
-    {%post_to_facebook object_or_url "Share on Facebook!"%}
-    {%post_to_twitter object_or_url "Share on Twitter!"%}
+    <a class = 'resultados' href="{%url 'result' c.pk%}">Results</a></span>
     {%endfor%}
-</div>
+    {% add_copy_script %}
 </form>
 </div>
 {%endblock content%}

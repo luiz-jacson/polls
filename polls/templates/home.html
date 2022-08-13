@@ -8,7 +8,7 @@
 <div id = "homequery">
 {%for p in perguntas%}
     <ul>
-    <li class = "rowitem"><span class = 'rowitem'>{{p.texto_pergunta}}</span><a class = 'vote' href="{%url 'vote' p.pk%}">Vote</a>  <a class = 'resultados' href="{%url 'result' p.pk%}">Results</a></li>
+        <a class = '' href="{%url 'vote' p.pk%}"><li class = "rowitem">{{p.texto_pergunta}}</span></li>
     </ul>
 {%endfor%}
 </div>

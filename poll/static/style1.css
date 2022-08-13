@@ -41,6 +41,7 @@ body{
     background-color: var(--navyligh);
     font-family: 'Oleo Script', sans-serif;
     font-weight: lighter;
+
 }
 a{
     text-decoration: none;
@@ -160,11 +161,13 @@ main#conteudo > h1#questionhome{
     background-color: #0E0357;
     border: none;
     color: white;
-    padding: 6px 10px;
+    padding: 10px 25px;
     text-decoration: none;
     cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: 'Oleo Script', cursive;
     font-size: 20px;
-    margin-left: 10px;
     border-radius: 20px;
 }
 .resultados:hover{
@@ -174,9 +177,13 @@ main#conteudo > h1#questionhome{
 }
 .rowitem{
     margin-bottom: 25px;
-}
-span.rowitem{
     font-size: 20px;
+   text-align: left;
+}
+
+.rowitem:hover{
+    text-decoration: underline;
+    color: #7E71D1;
 }
 #vote{
     text-align: center;
@@ -244,6 +251,7 @@ div#create > p{
     font-size: 20px;
     border-radius: 20px;
     text-align: left;
+    display: inline-block;
 }
 #botaovotar:hover{
     text-decoration: underline;
@@ -273,36 +281,27 @@ p.erro{
     color: red;
     font-style: italic;
 }
-.social_media{
-    width: 25px;
-    display: inline-block;
-}
-.social_media:hover{
-    width: 45px;
-    transition: 0.4s;
-}
-div.whatsapp-this{
-    display: inline-block;
-    padding-right: 20px;
-}
 
-div.facebook-this{
-    display: inline-block;
-    padding-right: 20px;
-}
-
-div.tweet-this{
-    display: inline-block;
-    
-}
-div.share{
-    display: inline-block;
-    padding-left: 80px;
-    
-   
-}
-span#sharespan{
-    padding-right: 20px;
+button.copylink{
+    background-color: #0E0357;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: 'Oleo Script', cursive;
     font-size: 20px;
-    
+    border-radius: 20px;
+    text-align: left;
+    display: inline-block;
+}
+button.copylink:hover{
+    text-decoration: underline;
+    background-color: var(--navyligh);
+    transition: 0.5s;
+}
+div.copy-this{
+    display: inline-block;
 }
