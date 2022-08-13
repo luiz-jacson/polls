@@ -161,7 +161,7 @@ main#conteudo > h1#questionhome{
     background-color: #0E0357;
     border: none;
     color: white;
-    padding: 10px 25px;
+    padding: 5px 20px;
     text-decoration: none;
     cursor: pointer;
     margin-top: 20px;
@@ -169,6 +169,7 @@ main#conteudo > h1#questionhome{
     font-family: 'Oleo Script', cursive;
     font-size: 20px;
     border-radius: 20px;
+    display: inline-block;
 }
 .resultados:hover{
     text-decoration: underline;
@@ -243,7 +244,7 @@ div#create > p{
     background-color: #0E0357;
     border: none;
     color: white;
-    padding: 10px 25px;
+    padding: 5px 20px;
     text-decoration: none;
     cursor: pointer;
     margin-top: 20px;
@@ -286,7 +287,7 @@ button.copylink{
     background-color: #0E0357;
     border: none;
     color: white;
-    padding: 10px 25px;
+    padding: 5px 20px;
     text-decoration: none;
     cursor: pointer;
     margin-top: 20px;
