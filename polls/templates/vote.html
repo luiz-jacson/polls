@@ -12,13 +12,14 @@
     <div class = 'respvoto'>
     <li class = 'respvotoitem'><input type="radio" value="{{c.pk}}" name = 'respostas'> <span class = "alternativa">{{c.texto_resposta}}</span> </li>
     </div>
+    
 </ul>
 {%endfor%}
 <input type='submit' value="Vote" name = 'Votar' id= "botaovotar" >
 <div class = 'share'>
     <span id = 'sharespan'>Share this Poll!</span>
     {%for c in pergunta%}
-    {%post_to_whatsapp object_or_url "/static/whatsapp.png"%}
+    <i style="font-size:24px; color: aqua;" class="fa">&#xf099;{%post_to_whatsapp object_or_url ""%}</i>
     {%post_to_facebook object_or_url "Share on Facebook!"%}
     {%post_to_twitter object_or_url "Share on Twitter!"%}
     {%endfor%}
