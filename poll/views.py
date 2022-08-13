@@ -1,5 +1,4 @@
 import math
-from msilib.schema import Class
 from tkinter.messagebox import QUESTION
 from django.shortcuts import redirect, render
 from django.http import request
