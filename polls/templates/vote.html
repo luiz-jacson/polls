@@ -18,7 +18,7 @@
 <div class = 'share'>
     <span id = 'sharespan'>Share this Poll!</span>
     {%for c in pergunta%}
-    {%post_to_whatsapp object_or_url%}
+    {%post_to_whatsapp object_or_url "p"%}
     {%post_to_facebook object_or_url "Share on Facebook!"%}
     {%post_to_twitter object_or_url "Share on Twitter!"%}
     {%endfor%}
